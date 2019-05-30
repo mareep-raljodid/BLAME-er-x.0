@@ -1,5 +1,7 @@
+use std::env;
 use std::fs;
 use simple_user_input::get_input;
+use std::path::PathBuf;
 
 mod simple_user_input {
     use std::io;
@@ -20,8 +22,10 @@ fn main() {
    // let input: String = get_input("Please type path...");
    // let data = fs::read_to_string(input).expect("Unable to read file");
     //println!("{}", data);
-    let cwd = env::current_dir().unwrap();
-    let my_str = cwd.into_os_string().into_string().unwrap();
-    println!("{}", mystr);
+
+    let mut path = PathBuf::new();
+    let curr_path = PathBuf::from(env::current_exe());
+    let print_path = format!("{}", curr_path.display());
+    println!("{}", print_path);
 }
 
