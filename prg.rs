@@ -1,13 +1,6 @@
 use std::fs;
 use simple_user_input::get_input;
 
-
-fn main() {
-    let input: String = get_input("Please type path...");
-    let data = fs::read_to_string(input).expect("Unable to read file");
-    println!("{}", data);
-}
-
 mod simple_user_input {
     use std::io;
     pub fn get_input(prompt: &str) -> String{
@@ -20,3 +13,11 @@ mod simple_user_input {
     input.trim().to_string()
     }
 }
+
+
+fn main() {
+    let input: String = get_input("Please type path...");
+    let data = fs::read_to_string(input).expect("Unable to read file");
+    println!("{}", data);
+}
+
