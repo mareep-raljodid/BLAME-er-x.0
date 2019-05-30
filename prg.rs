@@ -16,8 +16,12 @@ mod simple_user_input {
 
 
 fn main() {
-    let input: String = get_input("Please type path...");
-    let data = fs::read_to_string(input).expect("Unable to read file");
-    println!("{}", data);
+    //println!("{:?}", std::env::current_exe());
+   // let input: String = get_input("Please type path...");
+   // let data = fs::read_to_string(input).expect("Unable to read file");
+    //println!("{}", data);
+    let cwd = env::current_dir().unwrap();
+    let my_str = cwd.into_os_string().into_string().unwrap();
+    println!("{}", mystr);
 }
 
