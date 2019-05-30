@@ -17,6 +17,6 @@ mod simple_user_input {
             Ok(_goes_into_input_above) => {},
             Err(_no_updates_is_fine) => {},
         }
-        input.trim().to_string()
+    input.trim().to_string()
     }
 }
