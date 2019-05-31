@@ -18,10 +18,10 @@ mod simple_user_input {
 
 
 fn main() {
-    //println!("{:?}", std::env::current_exe());
-   // let input: String = get_input("Please type path...");
-   // let data = fs::read_to_string(input).expect("Unable to read file");
-    //println!("{}", data);
+/*    println!("{:?}", std::env::current_exe());
+    let input: String = get_input("Please type path...");
+    let data = fs::read_to_string(input).expect("Unable to read file");
+    println!("{}", data); */
 
     let mut path = PathBuf::new();
     let curr_path = PathBuf::from(env::current_exe());
