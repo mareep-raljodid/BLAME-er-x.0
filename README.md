@@ -1,4 +1,4 @@
-# COMMANDO_TTT x.0
+# BLAME-er x.0
 
  Description: A **CLI ENCRYPTION Application** uses Honey Encryption Method to encrypt message.
 
