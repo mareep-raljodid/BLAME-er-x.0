@@ -1,6 +1,6 @@
 # COMMANDO_TTT x.0
 
-    Description: A tic-tac-toe game made with rust.
+//Description: A tic-tac-toe game made with rust.
 
 * Developers:
  Rajdeep Bandopadhyay - bandoprp@mail.uc.edu
