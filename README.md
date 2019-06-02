@@ -1,6 +1,6 @@
 # COMMANDO_TTT x.0
 
-> Description: A tic-tac-toe game made with rust.
+> Description: A **CLI ENCRYPTION Application** uses Honey Encryption Method to encrypt message.
 
 * Developers:
  Rajdeep Bandopadhyay - bandoprp@mail.uc.edu
