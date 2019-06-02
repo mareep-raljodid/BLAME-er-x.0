@@ -1,4 +1,4 @@
-# COMMANDO 2.0
+# COMMANDO_TTT x.0
 Description: A tic-tac-toe game made with rust.
 
 * Developers:
