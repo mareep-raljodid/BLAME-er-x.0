@@ -11,6 +11,5 @@ No special compilations instructions.
 
 * Compile using:
 ```
-rustc main.rs
-./main
+cargo run
 ```
