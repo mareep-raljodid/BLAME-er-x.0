@@ -29,7 +29,7 @@ fn main() {
     {
         let input: String = get_input("Please type the PATH along with filename and extention.");
         let data = fs::read_to_string(input).expect("Unable to read file, please try again.");
-        println!("{}"); 
+       // println!("{}"); 
 
     }
 
