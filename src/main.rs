@@ -27,13 +27,13 @@ fn main() {
 
     if op == "1"
     {
+        let input: String = get_input("Please type the PATH along with filename and extention.");
+        let data = fs::read_to_string(input).expect("Unable to read file, please try again.");
+        println!("{}"); 
 
     }
 
-    let input: String = get_input("Please type path...");
-    let data = fs::read_to_string(input).expect("Unable to read file");
-    println!("{}", data); 
-
+    
   
 }
 
