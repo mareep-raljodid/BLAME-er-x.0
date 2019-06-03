@@ -1,7 +1,7 @@
-use std::env;
+//use std::env;
 use std::fs;
 use simple_user_input::get_input;
-use std::path::PathBuf;
+//use std::path::PathBuf;
 
 mod simple_user_input {
     use std::io;
@@ -16,16 +16,24 @@ mod simple_user_input {
     }
 }
 
-
 fn main() {
-    println!("{:?}", std::env::current_exe());
+    println!("You are currently in this PATH: {:?}", std::env::current_exe());
+    println!("Please select below option: ");
+    println!("  Enter 1 for PATH input of the required text file. ");
+    println!("  Enter 2 for direct string input.");
+
+    let op: String = get_input("Your choice: ");
+    println!("Your choice was {}", op);
+
+    if op == "1"
+    {
+
+    }
+
     let input: String = get_input("Please type path...");
     let data = fs::read_to_string(input).expect("Unable to read file");
     println!("{}", data); 
 
-  /*  let mut path = PathBuf::new();
-    let curr_path = PathBuf::from(env::current_exe());
-    let print_path = format!("{}", curr_path.display());
-    println!("{}", print_path);*/
+  
 }
 
