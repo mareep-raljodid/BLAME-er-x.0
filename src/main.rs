@@ -1,7 +1,6 @@
-//use std::env;
 use std::fs;
 use simple_user_input::get_input;
-//use std::path::PathBuf;
+
 
 mod simple_user_input {
     use std::io;
@@ -29,8 +28,9 @@ fn main() {
     {
         let input: String = get_input("Please type the PATH along with filename and extention.");
         let data = fs::read_to_string(input).expect("Unable to read file, please try again.");
-       // println!("{}"); 
-
+        let content = String::from(data);
+        println!("Content of the files are below: ");
+        println!("{}", content);
     }
 
     
