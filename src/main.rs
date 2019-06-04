@@ -29,8 +29,16 @@ fn main() {
         let input: String = get_input("Please type the PATH along with filename and extention.");
         let data = fs::read_to_string(input).expect("Unable to read file, please try again.");
         let content = String::from(data);
+        println!("Do you want to display file contents? (y/n) : Default: n");
+        let d: String = get_input("Your Choice: ");
+        if d != "n"{
         println!("Content of the files are below: ");
         println!("{}", content);
+        }
+        else
+        {
+            
+        }
     }
 
     
