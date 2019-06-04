@@ -6,3 +6,5 @@ edition = "2018"
 
 [dependencies]
 rust-crypto = "^0.2"
+blake2 = "0.6"
+digest = { version = "0.6", features = ["std"]}
