@@ -35,8 +35,6 @@ fn main() {
         println!("Content of the files are below: ");
         println!("{}", content);
         }
-        else
-        {
         use blake2::{Blake2b, Digest};
         let mut hasher = Blake2b::new();
         let datax = content.as_bytes();
@@ -47,12 +45,8 @@ fn main() {
         let hash = hasher.result();
         println!("Printing the result: ");
         println!("{:x}", hash);
-        fs::write("/encrypted/output.txt", hash).expect("Unable to write file");
-        println!
-        }
+        fs::write("output.txt", hash).expect("Unable to write file");
+        println!("Output was successfully written to output.txt.");
     }
-
-    
-  
 }
 
