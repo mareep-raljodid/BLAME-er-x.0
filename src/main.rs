@@ -48,5 +48,18 @@ fn main() {
         fs::write("output.txt", hash).expect("Unable to write file");
         println!("Output was successfully written to output.txt.");
     }
+    if op == "2" 
+    {
+        let inputx: String = get_input("Please type/paste the required string.");
+        use blake2::{Blake2b, Digest};
+        let mut dhasher = Blake2b::new();
+        let datax = inputx.as_bytes();
+        dhasher.input(datax);
+        let dhash = dhasher.result();
+        println!("Printing the result: ");
+        println!("{:x}", dhash);
+        fs::write("output.txt", dhash).expect("Unable to write file");
+        println!("Output was successfully written to output.txt.");
+    }
 }
 
