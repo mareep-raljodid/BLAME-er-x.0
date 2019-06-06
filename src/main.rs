@@ -14,6 +14,12 @@ mod simple_user_input {
     }
 }
 
+pub fn utf8_to_string(bytes: &[u8]) -> String {
+  let vector: Vec<u8> = Vec::from(bytes);
+  String::from_utf8(vector).unwrap()
+}
+
+
 fn main() {
     println!("You are currently in this PATH: {:?}", std::env::current_exe());
     println!("Please select below option: ");
@@ -68,7 +74,7 @@ fn main() {
         if userp == "f"
         {
             let fsdd: String = get_input("Please type the PATH along with filename and extention.");
-            let correcthash: String = get_input("Please paste in the required hash that your file needs to be checked with.");
+            let correcthash: String = get_input("Please paste in the PATH of text file containing required hash that your file needs to be checked with.");
             let fcg = fs::read_to_string(fsdd).expect("Unable to read file, please try again.");
             let goodcontent = String::from(fcg);
             println!("Do you want to display file contents? (y/n) : Default: n");
@@ -76,17 +82,25 @@ fn main() {
             if d != "n"{
             println!("Content of the files are below: ");
             println!("{}", goodcontent);
+            }
             use blake2::{Blake2b, Digest};
             let mut hasher = Blake2b::new();
             let dataxt = goodcontent.as_bytes();
             hasher.input(dataxt);
-            let checkhash = hasher.result();
-            if checkhash == correcthash
+            let checkhash =  hasher.result();
+            fs::write("check_temp1.txt", checkhash).expect("Unable to write file");
+            let a = fs::read_to_string("check_temp1.txt").expect("Unable to read file, please try again.");
+            let b = fs::read_to_string(correcthash).expect("Unable to read file, please try again.");
+            if a == b
             {
-                
+                println!("FILE generated HASH is {}, and provided HASH is {}", a, b);
+                println!("The required file FAILED verification with provided hash: U+274E NOT VERIFIED.");
             }
-
-        }
+            else
+            {
+                println!("FILE generated HASH is {}, and provided HASH is {}", a, b);
+                println!("FILE generated HASH is {}, and provided HASH is {}", a, b);
+            }
         }
     }
 }
