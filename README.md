@@ -15,6 +15,7 @@ Currently Capable of HASHing files and string, verification function will be add
 > * Special Instructions:
 > No special compilations instructions.
 
+
 * Compile using:
 ```
 cargo run
