@@ -87,19 +87,20 @@ fn main() {
             let mut hasher = Blake2b::new();
             let dataxt = goodcontent.as_bytes();
             hasher.input(dataxt);
-            let checkhash =  hasher.result();
-            fs::write("check_temp1.txt", checkhash).expect("Unable to write file");
+            let checkhash = hasher.result();
+            let cc = format!("{:x}", checkhash);
+            fs::write("check_temp1.txt", cc).expect("Unable to write file");
             let a = fs::read_to_string("check_temp1.txt").expect("Unable to read file, please try again.");
             let b = fs::read_to_string(correcthash).expect("Unable to read file, please try again.");
-            if a == b
+            if a.trim() == b.trim()
             {
                 println!("FILE generated HASH is {}, and provided HASH is {}", a, b);
-                println!("The required file FAILED verification with provided hash: U+274E NOT VERIFIED.");
+                println!("The required file PASSED verification with provided hash: ✅ VERIFIED.");
             }
             else
             {
                 println!("FILE generated HASH is {}, and provided HASH is {}", a, b);
-                println!("FILE generated HASH is {}, and provided HASH is {}", a, b);
+                println!("The required file FAILED verification with provided hash: ❌ NOT VERIFIED.");            
             }
         }
     }
