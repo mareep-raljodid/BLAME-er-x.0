@@ -57,9 +57,6 @@ ______ _       ___  ___  ___ _____                        _____
         let mut hasher = Blake2b::new();
         let datax = content.as_bytes();
         hasher.input(datax);
-// `input` can be called repeatedly
-        //hasher.input("String data".as_bytes());
-// Note that calling `result()` consumes hasher
         let hash = hasher.result();
         println!("Printing the result: ");
         println!("{:x}", hash);
