@@ -127,7 +127,7 @@ ______ _       ___  ___  ___ _____                        _____
             hasher.input(dataxot);
             let checkhashkk = hasher.result();
             let cc = format!("{:x}", checkhashkk);
-            fs::write("check_temp1.txt", cc).expect("Unable to write file");
+            fs::write("temp.txt", cc).expect("Unable to write file");
             let a = fs::read_to_string("check_temp1.txt").expect("Unable to read file, please try again.");
             let b = fs::read_to_string(correcthash).expect("Unable to read file, please try again.");
             if a.trim() == b.trim()
