@@ -119,6 +119,36 @@ ______ _       ___  ___  ___ _____                        _____
                 println!("The required file FAILED verification with provided hash: ❌ NOT VERIFIED.");            
             }
         }
+
+        if userp == "s"
+        {
+            let gghyt: String = get_input("Please type the string you want to input.");
+            let correcthash: String = get_input("Please paste in the PATH of text file containing required hash that your file needs to be checked with.");
+            use blake2::{Blake2b, Digest};
+            let mut hasher = Blake2b::new();
+            let dataxot = gghyt.as_bytes();
+            hasher.input(dataxot);
+            let checkhashkk = hasher.result();
+            let cc = format!("{:x}", checkhashkk);
+            fs::write("check_temp1.txt", cc).expect("Unable to write file");
+            let a = fs::read_to_string("check_temp1.txt").expect("Unable to read file, please try again.");
+            let b = fs::read_to_string(correcthash).expect("Unable to read file, please try again.");
+            if a.trim() == b.trim()
+            {
+                println!("STRING generated HASH is {}, \n and provided HASH is {}", a, b);
+                println!();
+                println!();
+                println!("The required string PASSED verification with provided hash: [::✅::]>> VERIFIED.");
+            }
+
+            else
+            {
+                println!("String generated HASH is {}, \n and provided HASH is {}", a, b);
+                println!();
+                println!();
+                println!("The required string FAILED verification with provided hash: [::❌::]>> NOT VERIFIED.");            
+            }
+        }
     }
 }
 
