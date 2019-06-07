@@ -31,7 +31,7 @@ ______ _       ___  ___  ___ _____                        _____
 |____/|_____/|_| |_/|_|  |_/|____/      |___|_|    /_/|_(_)___/ 
                                                                 
                                                                 ";
-    println!("{} \n An HASH Digest and verification helper. \nDeveloped by Rajdeep Bandopadhyay \n © 2019, All rights Reserved.",scr);
+    println!("{} \n An HASH Digest and verification helper. \nDeveloped by Rajdeep Bandopadhyay \n © 2019. All rights Reserved.",scr);
     println!("You are currently in this PATH: {:?}", std::env::current_exe());
     println!("Please select below option: ");
     println!("  Enter 1 for PATH input of the required text file. ");
