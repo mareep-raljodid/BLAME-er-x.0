@@ -97,6 +97,7 @@ fn main() {
                 println!("FILE generated HASH is {}, and provided HASH is {}", a, b);
                 println!("The required file PASSED verification with provided hash: ✅ VERIFIED.");
             }
+            
             else
             {
                 println!("FILE generated HASH is {}, and provided HASH is {}", a, b);
