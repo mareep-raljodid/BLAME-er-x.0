@@ -20,6 +20,7 @@ Currently Capable of HASHing files and string, verification function will be add
 
 Prerequisites:
 
+* Free Space on Disk: 55 MB
 * Rust 
 ``` 
 curl https://sh.rustup.rs -sSf | sh
