@@ -3,7 +3,8 @@
  Description: A **CLI ENCRYPTION Application** uses Honey Encryption Method to encrypt message.
 
 A Command Line Application, written in Rust.
-Digests the required string, text file, object (will be implemented soon) with HASH and can verify a HASH with another string, text file, object.
+Digests the required string, text file, object with HASH and can verify a HASH with another string, text file, object.
+Currently Implementing Honey Encryption Method.
 
 Currently Capable of HASHing files and string, verification function will be added very soon.
 
