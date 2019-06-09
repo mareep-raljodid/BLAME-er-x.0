@@ -34,7 +34,7 @@ ______ _       ___  ___  ___ _____                        _____
     println!("{} \n An HASH Digest and verification helper. \nDeveloped by Rajdeep Bandopadhyay \n © 2019. All rights Reserved.",scr);
     println!("You are currently in this PATH: {:?}", std::env::current_exe());
     println!("Please select below option: ");
-    println!("  Enter 1 for PATH input of the required text file. ");
+    println!("  Enter 1 for PATH input of the required file. ");
     println!("  Enter 2 for direct string input.");
     println!("  Enter 3 for CHECKSUM verification of a file/string.");
 
