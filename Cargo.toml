@@ -1,5 +1,5 @@
 [package]
-name = "RUST-Projects"
+name = "BLAME-er-x"
 version = "0.1.0"
 authors = ["Rajdeep Bandopadhyay <rajdeepbandopadhyay@gmail.com>"]
 edition = "2018"
