@@ -26,10 +26,6 @@ Prerequisites:
 curl https://sh.rustup.rs -sSf | sh
 ```
 
-* Cargo
-```
-brew cask install cargo
-```
 Cargo requires brew:
 ```
 xcode-select --install
@@ -37,8 +33,15 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew doctor
 brew install caskroom/cask/brew-cask
 ```
+* Cargo
+```
+brew cask install cargo
+```
 
-* Compile using:
+
+
+
+Compile using:
 ```
 cargo run
 ```
