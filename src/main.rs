@@ -22,15 +22,15 @@ pub fn utf8_to_string(bytes: &[u8]) -> String {
 
 fn main() {
 
-    let scr ="
+    let scr = "
 ______ _       ___  ___  ___ _____                        _____ 
 | ___ | |     / _ | |  |/  ||  ___|                      |  _  |
 | |_/ / |    / /_| || .  . || |__ ______ ___ _ __  __  __| |/' |
 | ___ | |    |  _  || ||/| ||  __|______/ _ | '__| | |/ /|  /| |
 | |_/ / |____| | | || |  | || |___     |  __/ |     >  < | |_/ /
-|____/|_____/|_| |_/|_|  |_/|____/      |___|_|    /_/|_(_)___/ 
-                                                                
-                                                                ";
+|____/|_____/|_| |_/|_|  |_/|____/      |___|_|    /_/|_(_)___/  ";
+
+
     println!("{} \n An HASH Digest and verification helper. \nDeveloped by Rajdeep Bandopadhyay \n © 2019. All rights Reserved.",scr);
     println!("You are currently in this PATH: {:?}", std::env::current_exe());
     println!("Please select below option: ");
